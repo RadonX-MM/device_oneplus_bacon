@@ -24,6 +24,10 @@ PRODUCT_PACKAGES += \
     libqcomvoiceprocessing \
     libqcompostprocbundle
 
+# ADB Logging
+PRODUCT_PACKAGES += \
+    loggy.sh
+
 # Feature definition files for 8974
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:system/etc/permissions/android.hardware.sensor.accelerometer.xml \
