@@ -17,5 +17,4 @@
 
 LOC_PATH := $(call my-dir)
 
-#include $(call first-makefiles-under,$(LOC_PATH))
-
+include $(call first-makefiles-under,$(LOC_PATH))
