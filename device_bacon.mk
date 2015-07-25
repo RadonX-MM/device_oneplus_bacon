@@ -121,3 +121,5 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.dex2oat-threads=2 \
     dalvik.vm.image-dex2oat-threads=4
+
+PRODUCT_COPY_FILES += device/oneplus/bacon/configs/media_profiles.xml:system/etc/media_profiles.xml
