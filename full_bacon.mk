@@ -12,6 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Use SaberMod GCC 4.9
+export TARGET_SM_AND := 4.9
+
 # Disable Modules from being optimized
 export NO_OPTIMIZATIONS :=\
   libqmiservices \
