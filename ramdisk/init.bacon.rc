@@ -23,7 +23,7 @@ on fs
 
 on early-init
     chown system system /sys/kernel/debug/kgsl/proc
-    write /sys/block/mmcblk0/queue/scheduler noop
+    write /sys/block/mmcblk0/queue/scheduler bfq
     write /sys/block/mmcblk0/bdi/read_ahead_kb 512
    
 on init
@@ -164,7 +164,6 @@ on charger
     write /sys/devices/system/cpu/cpu2/online 0
     write /sys/devices/system/cpu/cpu3/online 0
 
-#!/system/bin/sh
 ###############################
 ## Start RenderKernel Tweaks ##
 ###############################
@@ -216,8 +215,7 @@ echo 1958600 > /sys/kernel/msm_limiter/resume_max_freq_2
 echo 1958600 > /sys/kernel/msm_limiter/resume_max_freq_3
 echo 652000 > /sys/kernel/msm_limiter/suspend_max_freq
 
-echo zen > /sys/block/mmcblk0/queue/scheduler
-echo 1024 > /sys/block/mmcblk0/bdi/read_ahead_kb
+echo bfq > /sys/block/mmcblk0/queue/scheduler
 
 echo 578000000 > /sys/devices/fdb00000.qcom,kgsl-3d0/devfreq/fdb00000.qcom,kgsl-3d0/max_freq
 
