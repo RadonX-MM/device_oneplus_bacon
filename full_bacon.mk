@@ -51,3 +51,11 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     BUILD_FINGERPRINT=oneplus/bacon/A0001:5.1.1/LMY48B/YOG4PAS1N0:user/release-keys \
     PRIVATE_BUILD_DESC="bacon-user 5.1.1 LMY48B YOG4PAS1N0 release-keys"
 endif
+
+# Use extra changes from Settings.Out
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.heapstartsize=24m \
+    dalvik.vm.heapgrowthlimit=320m \
+    dalvik.vm.heapsize=512m \
+    wifi.supplicant_scan_interval=300
+    
