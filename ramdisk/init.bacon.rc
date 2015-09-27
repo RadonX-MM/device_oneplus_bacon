@@ -139,10 +139,12 @@ on boot
     chmod 0644 /sys/class/timed_output/vibrator/vtg_max
     chmod 0644 /sys/class/timed_output/vibrator/vtg_min
     
+    # init.d Support
+    /system/xbin/busybox run-parts /system/etc/init.d
+    
     # RenderKernel boot script
     echo "[Render-Kernel] Boot Script Started" | tee /dev/kmsg
     stop mpdecision
-    /sbin/busybox run-parts /system/etc/init.d
     write /sys/module/cpu_boost/parameters/boost_ms 20
     write /sys/module/cpu_boost/parameters/input_boost_ms 500
     write /sys/module/cpu_boost/parameters/input_boost_freq "0:1497600 1:1497600 2:1497600 3:1497600"
