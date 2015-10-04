@@ -31,6 +31,9 @@ $(call inherit-product, device/oneplus/bacon/device_bacon.mk)
 # Inherit RadonX vendor
 $(call inherit-product, vendor/rnx/common.mk)
 
+# Use Qualcomm build macros
+-include device/oneplus/bacon/utils.mk
+
 PRODUCT_NAME := rnx_bacon
 PRODUCT_DEVICE := bacon
 PRODUCT_MANUFACTURER := OnePlus
