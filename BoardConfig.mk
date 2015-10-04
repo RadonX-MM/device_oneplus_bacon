@@ -113,6 +113,21 @@ BOARD_USES_QCOM_HARDWARE := false
 # Recovery
 TARGET_RECOVERY_FSTAB := device/oneplus/bacon/ramdisk/fstab.bacon
 
+# Protobuf-c
+PROTOBUF_SUPPORTED := true
+
+# QCOM hardware
+BOARD_USES_QCOM_HARDWARE := false
+TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
+TARGET_USES_QCOM_BSP := true
+COMMON_GLOBAL_CFLAGS += -DQCOM_HARDWARE -DQCOM_BSP
+
+# Recovery
+TARGET_RECOVERY_FSTAB := $(PLATFORM_PATH)/rootdir/etc/fstab.bacon
+
+# RPC
+TARGET_NO_RPC := true
+
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
 
