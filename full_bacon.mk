@@ -21,7 +21,8 @@ export NO_OPTIMIZATIONS :=\
   libsrec% \
   %loc% \
   %gps% \
-  camera_test
+  camera_test \
+  Find7Parts
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
