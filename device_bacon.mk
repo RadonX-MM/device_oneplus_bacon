@@ -56,6 +56,8 @@ PRODUCT_PACKAGES += \
 # Dalvik/HWUI
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapminfree=2m
+$(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-3072-dalvik-heap.mk)
+$(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-3072-hwui-memory.mk)
 
 # Display
 PRODUCT_AAPT_CONFIG := normal
