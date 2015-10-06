@@ -18,6 +18,10 @@
 # call the proprietary setup
 $(call inherit-product-if-exists, vendor/oneplus/bacon/bacon-vendor-blobs.mk)
 
+# Visualizer
+PRODUCT_PACKAGES += \
+    android-visualizer
+
 # WCNSS
 PRODUCT_COPY_FILES += \
     device/qcom/msm8974/WCNSS_qcom_wlan_nv.bin:system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
