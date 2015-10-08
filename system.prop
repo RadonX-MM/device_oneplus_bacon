@@ -179,6 +179,9 @@ audio.offload.gapless.enabled=true
 # msm8974: Disable strict mode
 persist.sys.strictmode.disable=true
 
+# enable lazy dexopt
+persist.sys.lazy.dexopt=true
+
 # performance/battery tweaks
 windowsmgr.max_events_per_sec=90
 ro.max.fling_velocity=15000
