@@ -79,6 +79,8 @@ USE_DEVICE_SPECIFIC_CAMERA := true
 
 # Crypto
 TARGET_HW_DISK_ENCRYPTION := true
+# Tap to wake
+TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"
 
 # Graphics
 BOARD_EGL_CFG := device/qcom/msm8974/egl.cfg
