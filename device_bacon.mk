@@ -112,3 +112,7 @@ PRODUCT_PACKAGES += \
  # IO Scheduler
  PRODUCT_PROPERTY_OVERRIDES += \
     sys.io.scheduler=deadline
+
+ # Graphics
+ PRODUCT_PACKAGES += \
+    libboringssl-compat
