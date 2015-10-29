@@ -19,10 +19,6 @@
 $(call inherit-product-if-exists, vendor/oneplus/bacon/bacon-vendor-blobs.mk)
 $(call inherit-product-if-exists, vendor/oneplus/bacon/bacon-vendor.mk)
 
-# BoringSSL compatibility wrapper
-PRODUCT_PACKAGES += \
-    libboringssl-compat
-
 # WCNSS
 PRODUCT_COPY_FILES += \
     device/oneplus/bacon/wifi/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
