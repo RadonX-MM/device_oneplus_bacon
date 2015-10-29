@@ -89,6 +89,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     external/ant-wireless/antradio-library/com.dsi.ant.antradio_library.xml:system/etc/permissions/com.dsi.ant.antradio_library.xml
 
+# Codecs
+PRODUCT_COPY_FILES += \
+    device/oneplus/bacon/prebuilt/system/etc/media_codecs_performance.xml:system/etc/media_codecs_performance.xml
+
 # Power
 PRODUCT_PACKAGES += \
     power.msm8974
