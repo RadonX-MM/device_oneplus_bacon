@@ -91,7 +91,7 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 13271448576
 # Kernel
 TARGET_KERNEL_CONFIG := bacon_defconfig
 KERNEL_DEFCONFIG := bacon_defconfig
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=bacon user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3 androidboot.bootdevice=msm_sdcc.1
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=bacon user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3 androidboot.bootdevice=msm_sdcc.1 androidboot.selinux=permissive
 BOARD_KERNEL_TAGS_OFFSET := 0x01e00000
 BOARD_RAMDISK_OFFSET     := 0x02000000
 BOARD_KERNEL_BASE        := 0x00000000
@@ -105,18 +105,18 @@ TARGET_PROVIDES_LIBLIGHT := true
 BOARD_HAS_QCOM_WLAN              := true
 BOARD_HAS_QCOM_WLAN_SDK          := true
 BOARD_WLAN_DEVICE                := qcwcn
-WPA_SUPPLICANT_VERSION           := VER_0_8_X
+#CONFIG_EAP_PROXY                 := qmi
 BOARD_WPA_SUPPLICANT_DRIVER      := NL80211
 BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_qcwcn
 BOARD_HOSTAPD_DRIVER             := NL80211
 BOARD_HOSTAPD_PRIVATE_LIB        := lib_driver_cmd_qcwcn
-WIFI_DRIVER_MODULE_PATH          := "/system/lib/modules/wlan.ko"
-WIFI_DRIVER_MODULE_NAME          := "wlan"
 TARGET_USES_WCNSS_CTRL           := true
 TARGET_USES_QCOM_WCNSS_QMI       := true
 TARGET_USES_WCNSS_MAC_ADDR_REV   := true
 TARGET_WCNSS_MAC_PREFIX          := e8bba8
-WLAN_SELECT                      += CONFIG_PRIMA_WLAN=y
+WIFI_DRIVER_FW_PATH_STA          := "sta"
+WIFI_DRIVER_FW_PATH_AP           := "ap"
+WPA_SUPPLICANT_VERSION           := VER_0_8_X
 
 # Recovery
 TARGET_RECOVERY_FSTAB := device/oneplus/bacon/cm_ramdisk/fstab.bacon
