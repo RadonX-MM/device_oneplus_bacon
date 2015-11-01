@@ -76,13 +76,17 @@ on property:service.bootanim.exit=1
     chmod 664 /sys/devices/system/cpu/cpu2/online
     chmod 664 /sys/devices/system/cpu/cpu3/online
 
-on property:init.svc.bootanim=stopped
-    # Set light thermal restrictions while optimizing apps
-    # [throttle_freq, throttle_temp, unthrottle_temp]
-    write /sys/kernel/msm_thermal/low_thresh "1728000 45 43"
-    write /sys/kernel/msm_thermal/mid_thresh "1574400 50 47"
-    write /sys/kernel/msm_thermal/high_thresh "1267200 55 53"
-    write /sys/kernel/msm_thermal/enabled 1
+    write /sys/module/msm_thermal/core_control/enabled 0
+
+    write /sys/kernel/cpu_input_boost/ib_freqs "1036800 883200 960000"
+    write /sys/kernel/cpu_input_boost/load_based_syncs 1
+    write /sys/kernel/cpu_input_boost/migration_boost_ms 20
+    write /sys/kernel/cpu_input_boost/migration_load_threshold 35
+    write /sys/kernel/cpu_input_boost/sync_threshold 1267200
+    write /sys/kernel/cpu_input_boost/enabled 1
+
+    write /sys/class/devfreq/qcom,cpubw.40/governor "cpubw_hwmon"
+    write /sys/class/kgsl/kgsl-3d0/devfreq/governor msm-adreno-tz
 
 on property:sys.boot_completed=1
     # Switch to Deadline and balanced mode after boot for better UX
