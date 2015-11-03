@@ -28,10 +28,12 @@ public class DeviceSettings extends PreferenceActivity  {
     public static final String KEY_DOUBLE_TAP_SWITCH = "double_tap";
     public static final String KEY_CAMERA_SWITCH = "camera";
     public static final String KEY_MUSIC_SWITCH = "music";
+    public static final String KEY_TORCH_SWITCH = "torch";
 
     private TwoStatePreference mDoubleTapSwitch;
     private TwoStatePreference mCameraSwitch;
     private TwoStatePreference mMusicSwitch;
+    private TwoStatePreference mTorchSwitch;
     //private TwoStatePreference mKeyDisabler;
 
     @Override
@@ -60,6 +62,11 @@ public class DeviceSettings extends PreferenceActivity  {
         mMusicSwitch.setEnabled(MusicGestureSwitch.isSupported());
         mMusicSwitch.setChecked(MusicGestureSwitch.isEnabled(this));
         mMusicSwitch.setOnPreferenceChangeListener(new MusicGestureSwitch());
+
+        mTorchSwitch = (TwoStatePreference) findPreference(KEY_TORCH_SWITCH);
+        mTorchSwitch.setEnabled(TorchGestureSwitch.isSupported());
+        mTorchSwitch.setChecked(TorchGestureSwitch.isEnabled(this));
+        mTorchSwitch.setOnPreferenceChangeListener(new TorchGestureSwitch());
 
     }
 

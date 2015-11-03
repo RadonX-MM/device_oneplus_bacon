@@ -28,4 +28,6 @@
     <string name="key_disabler_title_head">Enable software keys</string>
     <string name="key_disabler_summary_head">Will use the software keys instead of hardware keys</string>
     <string name="offscreen_gestures_settings">Off screen gestures</string>
+    <string name="torch_title_head">Torch</string>
+    <string name="torch_summary_head">Draw a V to toggle torch</string>
 </resources>
