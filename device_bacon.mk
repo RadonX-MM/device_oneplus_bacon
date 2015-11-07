@@ -74,7 +74,7 @@ PRODUCT_PACKAGES += \
     Find7Parts
 
 # GPS
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     gps.msm8974
 
 # Lights
