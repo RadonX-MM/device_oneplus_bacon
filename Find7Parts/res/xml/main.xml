@@ -21,6 +21,18 @@
 			android:summary="@string/torch_summary_head"
 			android:title="@string/torch_title_head" />
 
+                <SwitchPreference
+                        android:key="touchscreen_gesture_haptic_feedback"
+                        android:persistent="false"
+                        android:title="@string/haptic_feedback"
+                        android:summary="@string/haptic_feedback_summary" />
+
+                <org.omnirom.device.SystemSettingSwitchPreference
+                    android:key="proximity_on_wake"
+                    android:title="@string/proximity_wake_title"
+                    android:summary="@string/proximity_wake_summary"
+                    android:defaultValue="true" />
+
 		<!-- KeyDisabler isn't used for now
 		<CheckBoxPreference
 			android:key="key_disabler"

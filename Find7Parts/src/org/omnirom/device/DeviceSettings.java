@@ -18,11 +18,15 @@
 package org.omnirom.device;
 
 import android.os.Bundle;
+import android.preference.Preference.OnPreferenceChangeListener;
+import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.TwoStatePreference;
+import android.preference.SwitchPreference;
+import android.provider.Settings;
 import android.view.MenuItem;
 
-public class DeviceSettings extends PreferenceActivity  {
+public class DeviceSettings extends PreferenceActivity implements OnPreferenceChangeListener {
 
     //public static final String KEY_DISABLER = "key_disabler";
     public static final String KEY_DOUBLE_TAP_SWITCH = "double_tap";
@@ -30,11 +34,15 @@ public class DeviceSettings extends PreferenceActivity  {
     public static final String KEY_MUSIC_SWITCH = "music";
     public static final String KEY_TORCH_SWITCH = "torch";
 
+    private static final String KEY_HAPTIC_FEEDBACK = "touchscreen_gesture_haptic_feedback";
+
     private TwoStatePreference mDoubleTapSwitch;
     private TwoStatePreference mCameraSwitch;
     private TwoStatePreference mMusicSwitch;
     private TwoStatePreference mTorchSwitch;
     //private TwoStatePreference mKeyDisabler;
+
+    private SwitchPreference mHapticFeedback;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -42,6 +50,9 @@ public class DeviceSettings extends PreferenceActivity  {
         getActionBar().setDisplayHomeAsUpEnabled(true);
 
         addPreferencesFromResource(R.xml.main);
+
+        mHapticFeedback = (SwitchPreference) findPreference(KEY_HAPTIC_FEEDBACK);
+        mHapticFeedback.setOnPreferenceChangeListener(this);
 
         //mKeyDisabler = (TwoStatePreference) findPreference(KEY_DISABLER);
         //mKeyDisabler.setEnabled(KeyDisabler.isSupported());
@@ -83,8 +94,22 @@ public class DeviceSettings extends PreferenceActivity  {
     }
 
     @Override
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        final String key = preference.getKey();
+        if (KEY_HAPTIC_FEEDBACK.equals(key)) {
+            final boolean value = (Boolean) newValue;
+            Settings.System.putInt(getContentResolver(), KEY_HAPTIC_FEEDBACK, value ? 1 : 0);
+            return true;
+        }
+
+        return false;
+    }
+
+    @Override
     protected void onResume() {
         super.onResume();
+        mHapticFeedback.setChecked(
+                Settings.System.getInt(getContentResolver(), KEY_HAPTIC_FEEDBACK, 1) != 0);
     }
 
     @Override
