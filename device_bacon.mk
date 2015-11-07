@@ -108,3 +108,7 @@ PRODUCT_PACKAGES += \
 # Wi-Fi
 PRODUCT_PACKAGES += \
     wcnss_service
+
+ # IO Scheduler
+ PRODUCT_PROPERTY_OVERRIDES += \
+    sys.io.scheduler=deadline
