@@ -74,7 +74,7 @@ PRODUCT_PACKAGES += \
     Find7Parts
 
 # GPS
-#PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES += \
     gps.msm8974
 
 # Lights
@@ -115,7 +115,8 @@ PRODUCT_PACKAGES += \
 
  # Graphics
  PRODUCT_PACKAGES += \
-    libboringssl-compat
+    libboringssl-compat \
+    org.omnirom.keyhandler
 
 # Limit dex2oat threads to improve thermals
 PRODUCT_PROPERTY_OVERRIDES += \
