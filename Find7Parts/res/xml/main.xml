@@ -33,7 +33,6 @@
                     android:summary="@string/proximity_wake_summary"
                     android:defaultValue="true" />
 
-		<!-- KeyDisabler isn't used for now
 		<CheckBoxPreference
 			android:key="key_disabler"
 			android:summary="@string/key_disabler_summary_head"

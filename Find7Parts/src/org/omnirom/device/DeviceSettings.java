@@ -28,7 +28,7 @@ import android.view.MenuItem;
 
 public class DeviceSettings extends PreferenceActivity implements OnPreferenceChangeListener {
 
-    //public static final String KEY_DISABLER = "key_disabler";
+    public static final String KEY_DISABLER = "key_disabler";
     public static final String KEY_DOUBLE_TAP_SWITCH = "double_tap";
     public static final String KEY_CAMERA_SWITCH = "camera";
     public static final String KEY_MUSIC_SWITCH = "music";
@@ -40,7 +40,7 @@ public class DeviceSettings extends PreferenceActivity implements OnPreferenceCh
     private TwoStatePreference mCameraSwitch;
     private TwoStatePreference mMusicSwitch;
     private TwoStatePreference mTorchSwitch;
-    //private TwoStatePreference mKeyDisabler;
+    private TwoStatePreference mKeyDisabler;
 
     private SwitchPreference mHapticFeedback;
 
@@ -54,10 +54,10 @@ public class DeviceSettings extends PreferenceActivity implements OnPreferenceCh
         mHapticFeedback = (SwitchPreference) findPreference(KEY_HAPTIC_FEEDBACK);
         mHapticFeedback.setOnPreferenceChangeListener(this);
 
-        //mKeyDisabler = (TwoStatePreference) findPreference(KEY_DISABLER);
-        //mKeyDisabler.setEnabled(KeyDisabler.isSupported());
-        //mKeyDisabler.setChecked(KeyDisabler.isEnabled(this));
-        //mKeyDisabler.setOnPreferenceChangeListener(new KeyDisabler());
+        mKeyDisabler = (TwoStatePreference) findPreference(KEY_DISABLER);
+        mKeyDisabler.setEnabled(KeyDisabler.isSupported());
+        mKeyDisabler.setChecked(KeyDisabler.isEnabled(this));
+        mKeyDisabler.setOnPreferenceChangeListener(new KeyDisabler());
 
         mDoubleTapSwitch = (TwoStatePreference) findPreference(KEY_DOUBLE_TAP_SWITCH);
         mDoubleTapSwitch.setEnabled(DoubleTapSwitch.isSupported());
