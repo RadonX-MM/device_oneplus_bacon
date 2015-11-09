@@ -111,8 +111,7 @@ PRODUCT_PACKAGES += \
 
  # Graphics
  PRODUCT_PACKAGES += \
-    libboringssl-compat \
-    org.omnirom.keyhandler
+    libboringssl-compat
 
 # CM Platform Library
 #PRODUCT_PACKAGES += \
