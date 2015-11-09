@@ -1,4 +1,4 @@
-package org.omnirom.device;
+package org.omnirom.keyhandler;
 
 import android.app.ActivityManagerNative;
 import android.app.KeyguardManager;
