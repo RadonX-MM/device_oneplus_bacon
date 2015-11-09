@@ -17,6 +17,13 @@
 # inherit CodeAurora MSM8974 Board Config
 -include device/qcom/msm8974/BoardConfig.mk
 
+# Architecture
+TARGET_ARCH := arm
+TARGET_ARCH_VARIANT := armv7-a-neon
+TARGET_CPU_ABI := armeabi-v7a
+TARGET_CPU_ABI2 := armeabi
+TARGET_CPU_VARIANT := krait
+
 # Include path
 TARGET_SPECIFIC_HEADER_PATH := device/oneplus/bacon/include
 
@@ -71,7 +78,7 @@ BLUETOOTH_HCI_USE_MCT := true
 USE_DEVICE_SPECIFIC_CAMERA := true
 
 # Crypto
-TARGET_HW_DISK_ENCRYPTION := false
+TARGET_HW_DISK_ENCRYPTION := true
 
 # Graphics
 BOARD_EGL_CFG := device/qcom/msm8974/egl.cfg
@@ -141,7 +148,7 @@ WIFI_DRIVER_FW_PATH_AP           := "ap"
 WPA_SUPPLICANT_VERSION           := VER_0_8_X
 
 # Recovery
-TARGET_RECOVERY_FSTAB := device/oneplus/bacon/cm_ramdisk/fstab.bacon
+TARGET_RECOVERY_FSTAB := device/oneplus/bacon/rootdir/etc/fstab.bacon
 BOARD_VOLD_CRYPTFS_MIGRATE := true
 
 # Sepolicy
