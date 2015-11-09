@@ -29,10 +29,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.par.branch=LA.BF.1.1.3-00210-8x74.0
 
-# Ramdisk
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,device/oneplus/bacon/cm_ramdisk,root)
-
 # Prebuilt
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,device/oneplus/bacon/prebuilt/system,system)
