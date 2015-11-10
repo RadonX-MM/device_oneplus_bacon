@@ -109,8 +109,8 @@ PRODUCT_PACKAGES += \
  PRODUCT_PROPERTY_OVERRIDES += \
     sys.io.scheduler=deadline
 
-# # Graphics
-#PRODUCT_PACKAGES += \
+# Graphics
+PRODUCT_PACKAGES += \
     libboringssl-compat
 
 # CM Platform Library
