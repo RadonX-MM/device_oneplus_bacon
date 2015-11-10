@@ -29,6 +29,16 @@ PRODUCT_COPY_FILES += \
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.par.branch=LA.BF.1.1.3-00210-8x74.0
 
+# Ramdisk
+PRODUCT_PACKAGES += \
+    libinit_bacon \
+    fstab.bacon \
+    init.bacon.rc \
+    init.qcom.power.rc \
+    init.qcom.usb.rc \
+    init.recovery.qcom.rc \
+    ueventd.bacon.rc
+
 # Prebuilt
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,device/oneplus/bacon/prebuilt/system,system)
