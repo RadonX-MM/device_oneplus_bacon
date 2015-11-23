@@ -51,8 +51,8 @@ BOARD_USES_QCOM_HARDWARE := false
 
 # Audio
 BOARD_USES_ALSA_AUDIO := true
-AUDIO_FEATURE_ENABLED_COMPRESS_CAPTURE := true
-AUDIO_FEATURE_ENABLED_COMPRESS_VOIP := true
+AUDIO_FEATURE_ENABLED_COMPRESS_CAPTURE := false
+AUDIO_FEATURE_ENABLED_COMPRESS_VOIP := false
 AUDIO_FEATURE_ENABLED_EXTN_FORMATS := true
 AUDIO_FEATURE_ENABLED_EXTN_POST_PROC := true
 AUDIO_FEATURE_ENABLED_FLUENCE := true
@@ -110,7 +110,7 @@ TARGET_USERIMAGES_USE_EXT4 := true
 # Kernel
 TARGET_KERNEL_CONFIG := bacon_defconfig
 KERNEL_DEFCONFIG := bacon_defconfig
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=bacon user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3 androidboot.bootdevice=msm_sdcc.1 androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=bacon user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3 androidboot.bootdevice=msm_sdcc.1
 BOARD_KERNEL_TAGS_OFFSET := 0x01e00000
 BOARD_RAMDISK_OFFSET     := 0x02000000
 BOARD_KERNEL_BASE        := 0x00000000
