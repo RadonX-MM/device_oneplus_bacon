@@ -36,7 +36,7 @@ $(call inherit-product, vendor/rnx/common.mk)
 # Use Qualcomm build macros
 -include device/oneplus/bacon/utils.mk
 
-PRODUCT_NAME := full_bacon
+PRODUCT_NAME := rnx_bacon
 PRODUCT_DEVICE := bacon
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_MODEL := A0001
