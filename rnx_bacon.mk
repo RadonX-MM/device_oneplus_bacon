@@ -1,3 +1,4 @@
+
 # Copyright (C) 2015 The AOSParadox Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -30,7 +31,7 @@ $(call inherit-product, device/oneplus/bacon/device_bacon.mk)
 # Inherit AOSParadox vendor
 $(call inherit-product, vendor/rnx/common.mk)
 
-PRODUCT_NAME := full_bacon
+PRODUCT_NAME := rnx_bacon
 PRODUCT_DEVICE := bacon
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_MODEL := A0001
