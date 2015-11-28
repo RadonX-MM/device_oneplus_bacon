@@ -20,8 +20,6 @@ BOARD_KERNEL_SEPARATED_DT := true
 KERNEL_DEFCONFIG := bacon_defconfig
 KERNEL_DIR := kernel
 
--include $(TOP)/$(KERNEL_DIR)/AndroidKernel.mk
-
 # device.mk doesn't know about us, and we can't PRODUCT_COPY_FILES here.
 # So cp will do.
 .PHONY: $(PRODUCT_OUT)/kernel
