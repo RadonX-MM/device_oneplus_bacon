@@ -20,6 +20,9 @@
 # Include path
 TARGET_SPECIFIC_HEADER_PATH := device/oneplus/bacon/include
 
+# Build LLVM and friends from source
+FORCE_BUILD_LLVM_COMPONENTS := true
+
 # Bootloader
 TARGET_NO_BOOTLOADER := true
 
