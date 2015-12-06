@@ -77,6 +77,7 @@ av.streaming.offload.enable=true
 audio.offload.pcm.16bit.enable=false
 audio.offload.pcm.24bit.enable=true
 audio.offload.multiple.enabled=false
+audio.deep_buffer.media=true
 mm.enable.smoothstreaming=true
 media.aac_51_output_enabled=true
 #37491 is decimal sum of supported codecs in AAL
