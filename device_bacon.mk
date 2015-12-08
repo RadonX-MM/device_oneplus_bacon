@@ -131,3 +131,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
  # System properties
  PRODUCT_PROPERTY_OVERRIDES += \
     persist.data.qmi.adb_logmask=0
+
+# Dalvik/HWUI
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.heapminfree=2m
