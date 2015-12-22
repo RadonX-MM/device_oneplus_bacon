@@ -4,3 +4,6 @@
 
 /dev/block/platform/msm_sdcc\.1/by-name/oppodycnvbk          u:object_r:modem_efs_partition_device:s0
 /dev/block/platform/msm_sdcc\.1/by-name/oppostanvbk          u:object_r:modem_efs_partition_device:s0
+
+/proc/touchpanel(/.*)?                                  u:object_r:proc_touchpanel:s0
+/sys/class/leds/button-backlight/brightness             u:object_r:proc_touchpanel:s0
