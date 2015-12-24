@@ -107,6 +107,9 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     power.msm8974
 
+PRODUCT_BOOT_JARS += \
+    qcmediaplayer
+
 # Dalvik and HWUI configurations
 $(call inherit-product, device/qcom/common/configs/phone-xxhdpi-2048-dalvik-heap.mk)
 $(call inherit-product, device/qcom/common/configs/phone-xxhdpi-2048-hwui-memory.mk)
