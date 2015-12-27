@@ -77,6 +77,9 @@ TARGET_USES_ION := true
 
 TARGET_HW_DISK_ENCRYPTION := false
 
+# Block based OTA
+BLOCK_BASED_OTA := false
+
 # Workaround framework bluetooth dependency
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_QCOM := true
