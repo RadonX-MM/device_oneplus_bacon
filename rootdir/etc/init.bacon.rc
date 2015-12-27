@@ -23,6 +23,7 @@ on early-init
 
 on init
 #    export LD_PRELOAD /system/lib/libboringssl-compat.so
+    export LD_PRELOAD /system/vendor/lib/libqomx_jpegenc.so
 
     # Set permissions for persist partition
     mkdir /persist 0771 system system
