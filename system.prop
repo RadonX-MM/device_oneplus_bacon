@@ -1,4 +1,4 @@
-#
+
 # system.prop for one+one
 #
 audio.deep_buffer.media=true
@@ -42,7 +42,7 @@ persist.rild.nitz_short_ons_0=
 persist.rild.nitz_short_ons_1=
 persist.rild.nitz_short_ons_2=
 persist.rild.nitz_short_ons_3=
-ril.subscription.types=NV,RUIM
+#ril.subscription.types=NV,RUIM
 DEVICE_PROVISIONED=1
 # Start in global mode
 ro.telephony.default_network=9
@@ -77,7 +77,7 @@ mm.enable.smoothstreaming=true
 media.aac_51_output_enabled=true
 #37491 is decimal sum of supported codecs in AAL
 #codecs: AVI AC3 ASF AAC QCP DTS 3G2 MP2TS
-#mm.enable.qcom_parser=37491
+mm.enable.qcom_parser=37491
 
 # Default to AwesomePlayer
 media.stagefright.use-awesome=true
@@ -107,7 +107,7 @@ ro.qualcomm.cabl=0
 #
 # System props for telephony
 # System prop to turn on CdmaLTEPhone always
-telephony.lteOnCdmaDevice=1
+#telephony.lteOnCdmaDevice=1
 
 #
 # System props for bluetooth
