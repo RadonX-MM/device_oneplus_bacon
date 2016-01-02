@@ -27,12 +27,6 @@
                         android:title="@string/haptic_feedback"
                         android:summary="@string/haptic_feedback_summary" />
 
-                <org.omnirom.device.SystemSettingSwitchPreference
-                    android:key="proximity_on_wake"
-                    android:title="@string/proximity_wake_title"
-                    android:summary="@string/proximity_wake_summary"
-                    android:defaultValue="true" />
-
 	</PreferenceCategory>
 
 </PreferenceScreen>
