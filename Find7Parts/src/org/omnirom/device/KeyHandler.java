@@ -121,11 +121,6 @@ public class KeyHandler implements DeviceKeyHandler {
         if (DEBUG) Log.i(TAG, "scanCode=" + event.getScanCode());
         boolean isKeySupported = ArrayUtils.contains(sSupportedGestures, event.getScanCode());
         if (isKeySupported && !mEventHandler.hasMessages(GESTURE_REQUEST)) {
-            if (event.getScanCode() == KEY_DOUBLE_TAP && !mPowerManager.isScreenOn()) {
-                if (DEBUG) Log.i(TAG, "KEY_DOUBLE_TAP");
-                mPowerManager.wakeUp(SystemClock.uptimeMillis());
-                return true;
-            }
             Message msg = getMessageForKeyEvent(event);
             mEventHandler.sendMessage(msg);
         }

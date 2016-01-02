@@ -42,9 +42,6 @@ public class DeviceSettings extends PreferenceActivity  {
 
         addPreferencesFromResource(R.xml.main);
 
-        mHapticFeedback = (SwitchPreference) findPreference(KEY_HAPTIC_FEEDBACK);
-        mHapticFeedback.setOnPreferenceChangeListener(this);
-
         mDoubleTapSwitch = (TwoStatePreference) findPreference(KEY_DOUBLE_TAP_SWITCH);
         mDoubleTapSwitch.setEnabled(DoubleTapSwitch.isSupported());
         mDoubleTapSwitch.setChecked(DoubleTapSwitch.isEnabled(this));

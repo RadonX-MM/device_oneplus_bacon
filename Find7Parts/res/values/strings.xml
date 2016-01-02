@@ -30,4 +30,6 @@
     <string name="offscreen_gestures_settings">Off screen gestures</string>
     <string name="torch_title_head">Torch</string>
     <string name="torch_summary_head">Draw a V to toggle torch</string>
+    <string name="haptic_feedback">Haptic Feedback</string>
+    <string name="haptic_feedback_summary">Toggle haptic feedback</string>
 </resources>
