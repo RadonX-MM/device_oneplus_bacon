@@ -19,8 +19,4 @@
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <!-- Boolean indicating whether we want button brightness support -->
-    <bool name="config_button_brightness_support">true</bool>
-    <integer name="config_button_brightness_default">128</integer>
-
 </resources>
