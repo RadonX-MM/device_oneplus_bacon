@@ -61,7 +61,7 @@ BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_PERSISTIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
 
-BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom ehci-hcd.park=3 androidboot.bootdevice=msm_sdcc.1
+BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom ehci-hcd.park=3 androidboot.bootdevice=msm_sdcc.1 androidboot.selinux=permissive
 BOARD_KERNEL_SEPARATED_DT := true
 
 BOARD_BOOTIMAGE_PARTITION_SIZE     := 16777216
@@ -111,8 +111,8 @@ TARGET_RECOVERY_FSTAB = device/oneplus/bacon/rootdir/etc/fstab.qcom
 BOARD_NFC_CHIPSET := pn547
 
 
-BOARD_SEPOLICY_DIRS += \
-     device/oneplus/bacon/sepolicy
+#BOARD_SEPOLICY_DIRS += \
+#     device/oneplus/bacon/sepolicy
 
 TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"
 USE_OPENGL_RENDERER := true
