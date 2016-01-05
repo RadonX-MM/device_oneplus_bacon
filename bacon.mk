@@ -1,5 +1,10 @@
 LOCAL_PATH := device/oneplus/bacon
 
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+$(call inherit-product, device/oneplus/bacon/common.mk)
+$(call inherit-product, vendor/oneplus/bacon/bacon-vendor.mk)
+$(call inherit-product, vendor/rnx/common.mk)
+
 PRODUCT_NAME := bacon
 PRODUCT_DEVICE := bacon
 PRODUCT_MANUFACTURER := OnePlus
@@ -13,10 +18,6 @@ SKIP_BOOT_JARS_CHECK := true
 
 DEVICE_PACKAGE_OVERLAYS := \
    $(LOCAL_PATH)/overlay
-
-$(call inherit-product, device/oneplus/bacon/common.mk)
-
-$(call inherit-product, vendor/oneplus/bacon/bacon-vendor.mk)
 
 PRODUCT_COPY_FILES += device/oneplus/bacon/media/media_profiles_8974.xml:system/etc/media_profiles.xml \
                       device/oneplus/bacon/media/media_codecs_8974.xml:system/etc/media_codecs.xml \
