@@ -459,6 +459,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml
 
+# include additional build utilities
+include device/oneplus/bacon/utils.mk
+
 #Enabling video for live effects
 -include frameworks/base/data/videos/VideoPackage1.mk
 
