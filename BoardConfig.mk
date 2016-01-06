@@ -107,8 +107,8 @@ TARGET_RECOVERY_FSTAB = device/oneplus/bacon/rootdir/etc/fstab.qcom
 BOARD_NFC_CHIPSET := pn547
 
 
-#BOARD_SEPOLICY_DIRS += \
-#     device/oneplus/bacon/sepolicy
+BOARD_SEPOLICY_DIRS += \
+     device/oneplus/bacon/sepolicy
 
 TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"
 USE_OPENGL_RENDERER := true
