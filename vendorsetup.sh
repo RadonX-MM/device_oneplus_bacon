@@ -1,1 +1,1 @@
-add_lunch_combo bacon-user
+add_lunch_combo rnx_bacon-user
