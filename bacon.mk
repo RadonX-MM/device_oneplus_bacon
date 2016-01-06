@@ -19,6 +19,10 @@ SKIP_BOOT_JARS_CHECK := true
 DEVICE_PACKAGE_OVERLAYS := \
    $(LOCAL_PATH)/overlay
 
+# Copy Global APN list
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/apns-conf.xml:system/etc/apns-conf.xml
+
 PRODUCT_COPY_FILES += device/oneplus/bacon/media/media_profiles_8974.xml:system/etc/media_profiles.xml \
                       device/oneplus/bacon/media/media_codecs_8974.xml:system/etc/media_codecs.xml \
                       device/oneplus/bacon/media/media_codecs_performance_8974.xml:system/etc/media_codecs_performance.xml
