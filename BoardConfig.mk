@@ -98,11 +98,7 @@ USE_OPENGL_RENDERER := true
 # Enable dex pre-opt to speed up initial boot
   ifeq ($(HOST_OS),linux)
     ifeq ($(WITH_DEXPREOPT),)
-      WITH_DEXPREOPT := true
-      ifneq ($(TARGET_BUILD_VARIANT),user)
-      # Retain classes.dex in APK's for non-user builds
-      DEX_PREOPT_DEFAULT := nostripping
-    endif
+      WITH_DEXPREOPT := false
   endif
 endif
 
