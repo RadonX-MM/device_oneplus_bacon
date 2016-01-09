@@ -26,7 +26,8 @@ PRODUCT_PACKAGES += \
 
 # ADB Logging
 PRODUCT_PACKAGES += \
-    loggy.sh
+    loggy.sh \
+    libncurses
 
 # Feature definition files for 8974
 PRODUCT_COPY_FILES += \
